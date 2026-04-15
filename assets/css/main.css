@@ -66,6 +66,8 @@ body {
   background-attachment: fixed;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 /* Типографика */
@@ -204,6 +206,8 @@ section {
   font-weight: 600;
   white-space: nowrap;
   font-size: 0.9rem;
+  min-width: 0;
+  flex-shrink: 1;
 }
 
 @media (max-width: 768px) {
@@ -630,6 +634,8 @@ section {
   margin-bottom: 32px;
   -webkit-overflow-scrolling: touch;
   border-radius: var(--radius-lg);
+  max-width: 100%;
+  overscroll-behavior-x: contain;
 }
 
 table {
@@ -3641,6 +3647,7 @@ a, button, .card, .service-card, .advantage, .step {
   -webkit-overflow-scrolling: touch;
   border-radius: var(--radius-lg);
   max-width: 100%;
+  overscroll-behavior-x: contain;
   margin-bottom: 32px;
   border: 1px solid var(--border-default);
 }
@@ -4016,5 +4023,39 @@ section.related-services ul li a:hover {
   /* Tech specs -> 1 column on small phones */
   .tech-specs {
     grid-template-columns: 1fr;
+  }
+
+  /* Header: prevent logo + phone + hamburger overflow */
+  .nav {
+    gap: 8px;
+    padding: 10px 12px;
+  }
+
+  .logo-text {
+    font-size: 1rem;
+  }
+
+  .btn-phone {
+    font-size: 0.75rem;
+  }
+
+  /* Container tighter padding on tiny screens */
+  .container {
+    padding: 0 12px;
+  }
+
+  /* CTA box padding */
+  .cta-box {
+    padding: 28px 16px;
+  }
+
+  /* Review form padding */
+  .review-form {
+    padding: 24px 16px;
+  }
+
+  /* Calculator form padding */
+  .calculator-form {
+    padding: 24px 16px;
   }
 }
