@@ -43,6 +43,15 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+img, video, iframe, svg, canvas {
+  max-width: 100%;
+}
+
+img, video {
+  height: auto;
 }
 
 body {
