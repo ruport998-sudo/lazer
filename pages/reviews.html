@@ -1,0 +1,205 @@
+---
+layout: default
+title: "Отзывы клиентов — Цех лазерной резки в Москве"
+description: "Отзывы клиентов о лазерной резке металла. Оценка 4.9 из 5. Поделитесь своим опытом работы с нами."
+permalink: /reviews/
+---
+
+<section class="page-hero">
+  <div class="container">
+    <h1>Оставить отзыв</h1>
+    <p class="lead">Поделитесь своим опытом работы с нами</p>
+  </div>
+</section>
+
+<section class="review-form-section">
+  <div class="container">
+    <div class="review-form-intro">
+      <div id="success-message" class="alert alert-success" style="display: none; padding: 16px; background: #d4edda; border: 1px solid #c3e6cb; border-radius: 8px; margin-bottom: 24px; color: #155724;">
+        ✅ <strong>Спасибо за отзыв!</strong> Мы получили ваше сообщение и опубликуем его после модерации.
+      </div>
+      
+      <p>Ваше мнение очень важно для нас! Расскажите о своём опыте работы с нашим цехом — это поможет нам стать лучше и поможет другим клиентам сделать правильный выбор.</p>
+    </div>
+
+    <form class="form review-form" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="{{ site.web3forms.access_key }}">
+      <input type="hidden" name="redirect" value="https://ceh-lazer-rezka.ru/reviews/?success=true">
+      <input type="hidden" name="subject" value="Новый отзыв с сайта">
+      
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name">Ваше имя *</label>
+          <input type="text" id="name" name="name" required minlength="2" placeholder="Иван Иванов">
+        </div>
+        
+        <div class="form-group">
+          <label for="company">Компания</label>
+          <input type="text" id="company" name="company" placeholder="ООО «Название»">
+        </div>
+      </div>
+      
+      <div class="form-row">
+        <div class="form-group">
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="email" required placeholder="ivan@example.com">
+        </div>
+        
+        <div class="form-group">
+          <label for="phone">Телефон</label>
+          <input type="tel" id="phone" name="phone" placeholder="+7 (999) 123-45-67">
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label for="rating">Оценка *</label>
+        <div class="rating-input">
+          <input type="radio" id="star5" name="rating" value="5" required>
+          <label for="star5" title="5 звёзд">★</label>
+          <input type="radio" id="star4" name="rating" value="4">
+          <label for="star4" title="4 звезды">★</label>
+          <input type="radio" id="star3" name="rating" value="3">
+          <label for="star3" title="3 звезды">★</label>
+          <input type="radio" id="star2" name="rating" value="2">
+          <label for="star2" title="2 звезды">★</label>
+          <input type="radio" id="star1" name="rating" value="1">
+          <label for="star1" title="1 звезда">★</label>
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label for="review">Ваш отзыв *</label>
+        <textarea id="review" name="review" rows="6" required minlength="50" placeholder="Расскажите о своём опыте работы с нами: что понравилось, что можно улучшить..."></textarea>
+        <small>Минимум 50 символов</small>
+      </div>
+      
+      <div class="form-group">
+        <label class="checkbox">
+          <input type="checkbox" name="consent" required>
+          <span>Согласен на обработку персональных данных и публикацию отзыва на сайте *</span>
+        </label>
+      </div>
+      
+      <button type="submit" class="btn btn-primary">Отправить отзыв</button>
+    </form>
+  </div>
+</section>
+
+<section class="existing-reviews">
+  <div class="container">
+    <h2 class="section-title">Отзывы наших клиентов</h2>
+    
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-header">
+          <div class="review-author">
+            <div class="author-avatar">А</div>
+            <div class="author-info">
+              <div class="author-name">Алексей Морозов</div>
+              <div class="author-company">ООО "СтройТех"</div>
+            </div>
+          </div>
+          <div class="review-rating">★★★★★</div>
+        </div>
+        <div class="review-text">
+          Заказывали резку металлоконструкций для производственного цеха. Точность идеальная, сроки соблюдены. Особенно порадовал онлайн-калькулятор — сразу понятна стоимость. Рекомендую!
+        </div>
+        <div class="review-date">15 марта 2024</div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-header">
+          <div class="review-author">
+            <div class="author-avatar">М</div>
+            <div class="author-info">
+              <div class="author-name">Мария Соколова</div>
+              <div class="author-company">Дизайн-студия "Интерьер+"</div>
+            </div>
+          </div>
+          <div class="review-rating">★★★★★</div>
+        </div>
+        <div class="review-text">
+          Делали декоративные панели из нержавейки для ресторана. Качество резки на высоте, все детали идеально подошли. Менеджер оперативно отвечал на все вопросы. Будем обращаться ещё!
+        </div>
+        <div class="review-date">8 марта 2024</div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-header">
+          <div class="review-author">
+            <div class="author-avatar">Д</div>
+            <div class="author-info">
+              <div class="author-name">Дмитрий Петров</div>
+              <div class="author-company">ИП Петров Д.А.</div>
+            </div>
+          </div>
+          <div class="review-rating">★★★★★</div>
+        </div>
+        <div class="review-text">
+          Срочно нужна была резка алюминия для выставочного стенда. Сделали за день! Точность ±0.01мм — это не просто слова, проверил штангенциркулем. Цены адекватные, работа профессиональная.
+        </div>
+        <div class="review-date">1 марта 2024</div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-header">
+          <div class="review-author">
+            <div class="author-avatar">Е</div>
+            <div class="author-info">
+              <div class="author-name">Елена Волкова</div>
+              <div class="author-company">Рекламное агентство "Визит"</div>
+            </div>
+          </div>
+          <div class="review-rating">★★★★★</div>
+        </div>
+        <div class="review-text">
+          Постоянно заказываем резку металла для вывесок и стендов. Всегда качественно, быстро и без косяков. AI-консультант на сайте реально помогает — отвечает круглосуточно. Спасибо за работу!
+        </div>
+        <div class="review-date">22 февраля 2024</div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-header">
+          <div class="review-author">
+            <div class="author-avatar">И</div>
+            <div class="author-info">
+              <div class="author-name">Игорь Смирнов</div>
+              <div class="author-company">Производство мебели "Лофт"</div>
+            </div>
+          </div>
+          <div class="review-rating">★★★★★</div>
+        </div>
+        <div class="review-text">
+          Заказываем металлические детали для дизайнерской мебели. Резка + гибка + покраска — всё в одном месте, очень удобно. Качество отличное, скидка на серию приятно удивила. Работаем уже полгода.
+        </div>
+        <div class="review-date">10 февраля 2024</div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-header">
+          <div class="review-author">
+            <div class="author-avatar">О</div>
+            <div class="author-info">
+              <div class="author-name">Ольга Кузнецова</div>
+              <div class="author-company">Архитектурное бюро</div>
+            </div>
+          </div>
+          <div class="review-rating">★★★★★</div>
+        </div>
+        <div class="review-text">
+          Сложный проект с множеством деталей — справились на отлично! Помогли оптимизировать чертежи, подсказали как сэкономить на материале. Профессионалы своего дела. Рекомендую всем коллегам!
+        </div>
+        <div class="review-date">5 февраля 2024</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+// Показать сообщение об успешной отправке
+if (window.location.search.includes('success=true')) {
+  document.getElementById('success-message').style.display = 'block';
+  document.getElementById('success-message').scrollIntoView({ behavior: 'smooth', block: 'center' });
+  window.history.replaceState({}, document.title, window.location.pathname);
+}
+</script>

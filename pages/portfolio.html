@@ -1,0 +1,161 @@
+---
+layout: default
+title: "Портфолио работ — Лазерная резка, гибка и покраска металла"
+description: "Фотографии выполненных проектов: лазерная резка стали и нержавейки, гибка, порошковая покраска. Примеры готовых изделий."
+permalink: /portfolio/
+---
+
+<section class="page-hero">
+  <div class="container">
+    <h1>Портфолио работ</h1>
+    <p class="lead">Примеры выполненных проектов и изделий</p>
+  </div>
+</section>
+
+<section class="portfolio-section">
+  <div class="container">
+    <div class="portfolio-filters">
+      <button class="filter-btn active" data-filter="all">Все работы</button>
+      <button class="filter-btn" data-filter="metal">Резка металла</button>
+      <button class="filter-btn" data-filter="bending">Гибка</button>
+    </div>
+    
+    <div class="portfolio-grid">
+      <div class="portfolio-item" data-category="metal">
+        <div class="portfolio-image">
+          <img class="portfolio-photo"
+               src="{{ '/assets/images/portfolio/portfolio-01.jpg' | relative_url }}"
+               alt="Детали изготовленные методом лазерной резки"
+               loading="lazy"
+               decoding="async"
+               onload="this.nextElementSibling.style.display='none';"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="portfolio-placeholder">🔥</div>
+        </div>
+        <div class="portfolio-info">
+          <h3>Детали изготовленные методом лазерной резки</h3>
+        </div>
+      </div>
+      
+      <div class="portfolio-item" data-category="metal">
+        <div class="portfolio-image">
+          <img class="portfolio-photo"
+               src="{{ '/assets/images/portfolio/portfolio-02.jpg' | relative_url }}"
+               alt="Порошковая покраска деталей,элементов до 6 метров"
+               loading="lazy"
+               decoding="async"
+               onload="this.nextElementSibling.style.display='none';"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="portfolio-placeholder">⚙️</div>
+        </div>
+        <div class="portfolio-info">
+          <h3>Порошковая покраска деталей,элементов до 6 метров</h3>
+        </div>
+      </div>
+      
+      <div class="portfolio-item" data-category="metal">
+        <div class="portfolio-image">
+          <img class="portfolio-photo"
+               src="{{ '/assets/images/portfolio/portfolio-03.jpg' | relative_url }}"
+               alt="Изготовление деталей на станке лазерной резки"
+               loading="lazy"
+               decoding="async"
+               onload="this.nextElementSibling.style.display='none';"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="portfolio-placeholder">🏢</div>
+        </div>
+        <div class="portfolio-info">
+          <h3>Изготовление деталей на станке лазерной резки</h3>
+        </div>
+      </div>
+      
+      <div class="portfolio-item" data-category="metal">
+        <div class="portfolio-image">
+          <img class="portfolio-photo"
+               src="{{ '/assets/images/portfolio/portfolio-04.jpg' | relative_url }}"
+               alt="Процесс нанесения порошковой краски"
+               loading="lazy"
+               decoding="async"
+               onload="this.nextElementSibling.style.display='none';"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="portfolio-placeholder">🔧</div>
+        </div>
+        <div class="portfolio-info">
+          <h3>Процесс нанесения порошковой краски</h3>
+        </div>
+      </div>
+      
+      <div class="portfolio-item" data-category="metal">
+        <div class="portfolio-image">
+          <img class="portfolio-photo"
+               src="{{ '/assets/images/portfolio/portfolio-05.jpg' | relative_url }}"
+               alt="Декоративные панели из стали"
+               loading="lazy"
+               decoding="async"
+               onload="this.nextElementSibling.style.display='none';"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="portfolio-placeholder">🏗️</div>
+        </div>
+        <div class="portfolio-info">
+          <h3>Декоративные панели из стали</h3>
+        </div>
+      </div>
+
+      <div class="portfolio-item" data-category="bending">
+        <div class="portfolio-image">
+          <img class="portfolio-photo"
+               src="{{ '/assets/images/portfolio/portfolio-06.jpg' | relative_url }}"
+               alt="Гибка металлических деталей на заказ"
+               loading="lazy"
+               decoding="async"
+               onload="this.nextElementSibling.style.display='none';"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="portfolio-placeholder">📦</div>
+        </div>
+        <div class="portfolio-info">
+          <h3>Гибка металлических деталей на заказ</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-box">
+      <h2>Хотите так же?</h2>
+      <p>Отправьте чертёж и получите расчёт в течение 1 часа</p>
+      <div class="cta-buttons">
+        <a href="/calculator/" class="btn btn-primary">Рассчитать стоимость</a>
+        <a href="/contacts/" class="btn btn-secondary">Отправить чертёж</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+// Фильтрация портфолио
+const filterBtns = document.querySelectorAll('.filter-btn');
+const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const filter = btn.dataset.filter;
+    
+    // Активная кнопка
+    filterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    
+    // Фильтрация
+    portfolioItems.forEach(item => {
+      if (filter === 'all' || item.dataset.category === filter) {
+        item.style.display = 'block';
+        setTimeout(() => item.style.opacity = '1', 10);
+      } else {
+        item.style.opacity = '0';
+        setTimeout(() => item.style.display = 'none', 300);
+      }
+    });
+  });
+});
+</script>

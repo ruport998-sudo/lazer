@@ -1,0 +1,17 @@
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+vendor/
+.bundle/
+Gemfile.lock
+node_modules/
+.DS_Store
+*.swp
+*.swo
+*~
+
+# AI Configuration (содержит API ключи)
+*.env
+.env.local
+.env.production
