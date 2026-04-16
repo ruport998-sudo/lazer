@@ -1,12 +1,14 @@
 # ===== ПОИСКОВЫЕ РОБОТЫ =====
 User-agent: Googlebot
 Allow: /
+Crawl-delay: 0
 
 User-agent: Google-Extended
 Allow: /
 
 User-agent: Bingbot
 Allow: /
+Crawl-delay: 1
 
 User-agent: Slurp
 Allow: /
@@ -17,6 +19,10 @@ Allow: /
 
 User-agent: ChatGPT-User
 Allow: /
+
+# ===== SITEMAP =====
+Sitemap: https://ceh-lazer-rezka.ru/sitemap.xml
+Sitemap: https://ceh-lazer-rezka.ru/ai-sitemap.json
 
 User-agent: OAI-SearchBot
 Allow: /
